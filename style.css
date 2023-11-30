@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: rgb(128, 128, 128);
+}
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+}
+.tabs input{
+    display: none;
+}
+.tabs label{
+    padding: 10px 20px;
+    display: inline-block;
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    transition: 0.3s;
+}
+
+.tabs label:hover{
+    background: rgba(0, 128, 0, 0.427);
+    color: white;
+}
+
+#kyrgyzstan:checked ~ .tab1{
+    background: green;
+    color: white;
+}
+
+#switzerland:checked ~ .tab2{
+    background: green;
+    color: white;
+}
+
+#italy:checked ~ .tab3{
+    background: green;
+    color: white;
+}
+
+#dubai:checked ~ .tab4{
+    background: green;
+    color: white;
+}
+
+#kyrgyzstan:checked ~ .sw-content,
+#kyrgyzstan:checked ~ .it-content,
+#kyrgyzstan:checked ~ .db-content{
+    display: none;
+}
+#switzerland:checked ~ .kg-content,
+#switzerland:checked ~ .it-content,
+#switzerland:checked ~ .db-content{
+    display: none;
+}
+#italy:checked ~ .kg-content,
+#italy:checked ~ .sw-content,
+#italy:checked ~ .db-content{
+    display: none;
+}
+#dubai:checked ~ .kg-content,
+#dubai:checked ~ .sw-content,
+#dubai:checked ~ .it-content{
+    display: none;
+}
+
+.kg-content h1{
+    padding: 20px 20px;
+    color: rgb(210, 30, 30);
+}
+
+.sw-content h1{
+    color: darkorange;
+    padding: 20px 20px;
+}
+
+.it-content h1{
+    color:white
+    padding:20px 20px;
+}
+
+.db-content{
+    color: fuchsia;
+    padding: 20px 20px;
+}
